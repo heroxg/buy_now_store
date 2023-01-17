@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #313131 !important;
+}
+.navbar-nav .nav-link {
+    color: #fff;
+}
+.navbar-nav .nav-link:hover {
+    color: #fff;
+}
+.navbar-nav .show>.nav-link {
+    color: #fff !important;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: transparent !important;
+    color: #313131;
+}
+.dropdown-item:active {
+    background-color: #ffb600;
+    color: #313131 !important;
+}
