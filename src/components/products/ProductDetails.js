@@ -53,11 +53,11 @@ const ProductDetails = () => {
         <>
          <Header />
             <Container className='product__details__wrap'>
-                <Row>
+                <Row className='product__details__row'>
                     <Col sm={4}>
                         <img src={product.image} width="350" />
                     </Col>
-                    <Col sm={8}>
+                    <Col sm={8} className="product__details__inner">
                         <h1>{product.title}</h1>
                         <p>${product.price}</p>
                         <p>{product.description}</p>

@@ -5,6 +5,16 @@
 .product_wrap {
     gap: 30px;
 }
+.product__details__row {
+    justify-content: space-between;
+}
+.product__details__row img {
+    width: 100%;
+    object-fit: contain;
+}
+.product__details__inner h1 {
+    font-size: 32px;
+}
 .category__wraper {
     background-color: #f7f6f7;
     padding-left: 0;
@@ -47,6 +57,7 @@
 }
 .product__details__wrap {
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 .quantity_wrap {
     margin-top: 30px;
