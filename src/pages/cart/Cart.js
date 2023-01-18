@@ -32,7 +32,7 @@ const Cart = () => {
       <Container>
         <Row className='cart__wrapper__inner'>
         <h1>Cart</h1>
-            <Col xs={8}>
+            <Col xs={12} md={3} lg={8}>
                 <Table responsive="sm">
                     <thead>
                     <tr>
@@ -62,7 +62,7 @@ const Cart = () => {
                     </tbody>
                 </Table>
             </Col>
-            <Col xs={3} className="cart__summary">
+            <Col xs={12} md={3} lg={3} className="cart__summary">
                 <h3>Cart Summary</h3>
                 <h5>Total ${cartTotal.toFixed(2)}</h5>
                 <button className='custom_btn'>Proceed to checkout</button>
