@@ -21,6 +21,11 @@
     padding-right: 0;
     padding-top: 30px;
     padding-bottom: 15px;
+    transition: ease-in-out 2s;
+}
+.catIcon {
+    cursor: pointer;
+    display: none;
 }
 .category__wraper li {
     list-style: none;

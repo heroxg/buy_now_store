@@ -5,6 +5,7 @@ import ProductTemplate from './ProductTemplate';
 import './Product.css'
 import { Link, useLocation } from 'react-router-dom';
 import LoadingSpinner from '../spinner/LoadingSpinner';
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Product = () => {
     const [products, setProducts] = useState([]);
@@ -36,6 +37,16 @@ const Product = () => {
         setfilterProduct(selectedPorduct);
     }
 
+    //toggle category list on mobile
+    const toggleCategory = () => {
+        const categoryList = document.querySelector('.category__wraper')
+        if(window.getComputedStyle(categoryList).display === "none") {
+            categoryList.style.display = "block";
+        }else {
+            categoryList.style.display = "none";
+        }
+    }
+
     useEffect(() => {
         displayProducts()
     },[])
@@ -54,7 +65,7 @@ const Product = () => {
     <Container className='product__container'>
         <Row className='product_wrap'>
             <Col xs={3} className="product__grid__right">
-                <h4>Shop by Category</h4>
+                <h4>Shop by Category <span className='catIcon' onClick={toggleCategory}><AiOutlineMenu /></span></h4> 
                 <ul className='category__wraper'>
                     <li><Link to='/products'>All</Link></li>
                     {category.map(category => {
@@ -72,7 +83,8 @@ const Product = () => {
                 <>
                     {filterProduct.map(product => {
                         return (
-                            <ProductTemplate    
+                            <ProductTemplate 
+                            key={product.id}   
                             id= {product.id}
                             img = {product.image}
                             title = {product.title}
@@ -85,7 +97,8 @@ const Product = () => {
                 <>
                 {products.map(product => {
                 return (
-                    <ProductTemplate    
+                    <ProductTemplate 
+                    key={product.id}   
                     id= {product.id}
                     img = {product.image}
                     title = {product.title}

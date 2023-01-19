@@ -2,6 +2,12 @@
     .product__grid__left, .product__grid__right {
         width: 100%;
     }
+    .catIcon {
+        display: inline-block;
+    }
+    .category__wraper {
+        display: none;
+    }
 }
 @media screen and (max-width: 575px) {
     .product__details__row img {
